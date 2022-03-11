@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/i/favicon.png" type="img/x-icon">
+
+    <!-- Useful meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <title>polandWork</title>
+
+</head>
+
+<body>
+<div id="app">
+    <section class="menu">
+    
+        <nav class="navbar has-background-white-bis is-fixed-top is-white " role="navigation" aria-label="main navigation">
+            <div class="container  is-fullhd px-3">
+                <div class="navbar-brand">
+                    <a class="navbar-item" href="https://bulma.io">
+                        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                    </a>
+    
+                    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                       data-target="navbarBasicExample">
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                    </a>
+                </div>
+    
+                <div id="navbarBasicExample" class="navbar-menu">
+                    <div class="navbar-start">
+    
+                    </div>
+    
+                    <div class="navbar-end">
+                        <a class="navbar-item is-uppercase">
+                            Главная
+                        </a>
+    
+                        <a class="navbar-item is-uppercase">
+                            ищу работу
+                        </a>
+    
+                        <a class="navbar-item is-uppercase">
+                            предлагаю работу
+                        </a>
+    
+                        <a class="navbar-item is-uppercase mx-6">
+                            <figure class="image">
+                                <img src="../../assets/i/svg/avatar_non_photo.svg" alt="non photo">
+                            </figure>
+                            <span class="ml-3">Вход</span>
+                        </a>
+    
+                        <div class="navbar-item has-dropdown  is-hoverable">
+                            <a class="navbar-link">
+                                RU
+                            </a>
+    
+                            <div class="navbar-dropdown is-right">
+                                <a class="navbar-item ">
+                                    PL
+                                </a>
+                                <a class="navbar-item">
+                                    EN
+                                </a>
+                                <a class="navbar-item">
+                                    DE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+    </section>
+    <section class="header">
+        <section class="hero is-medium">
+            <center>
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="mb-6">
+                            <div class="display-1 montserrat has-text-weight-bold has-text-white-bis ">
+                                Работа в <span class="yellow"> Германии </span>
+                            </div>
+                            <p class="has-text-white-bis">
+                                Сайт № 1 по трудоустройству в Германии
+                            </p>
+                        </div>
+                        <div class="opacity p-6">
+                            <form>
+                                <div class="is-flex">
+                                    <input class="input has-background-white-bis border-none" type="text" name="" id=""
+                                           placeholder="Введите ключевые слова (например: сантехник)">
+    
+                                    <v-select
+                                            style="width: 100%" class="has-background-white-bis border-none"
+                                            :options="options"
+                                            v-model="selectedCity"
+                                    >
+                                        <template slot="selected-option" scope="option">
+                                            <img class="mr-2" src="assets/i/svg/location.svg"/> {{ option.label }}
+                                        </template>
+                                        <template slot="option" scope="option">
+                                            <img class="mr-2" src="assets/i/svg/location.svg"/> {{ option.label }}
+                                        </template>
+                                    </v-select>
+    
+                                    <button type="submit" class="button is-uppercase has-text-white-bis">
+                                        <figure class="image is-22x22 mr-3">
+                                            <img src="../../assets/i/svg/search.svg" alt="search">
+                                        </figure>
+                                        найти вакансию
+                                    </button>
+    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </section>
+    </section>
+    <section class="work p-3 my-6">
+        <div class="container is-fullhd">
+            <div class="columns">
+                <div class="column is-three-quarters-desktop">
+                    <div class="columns">
+                        <div class="column">
+                            <button class="button is-uppercase has-text-white-bis revers p-5">предлагаю работу</button>
+                            <button class="button is-uppercase has-text-white-bis revers bg-none p-5">ищу работу</button>
+                        </div>
+                        <div class="column has-text-right-desktop">
+                            <button class="button revers is-uppercase has-text-white-bis p-5">
+                                <i class="fa-solid fa-plus mr-3"></i>
+                                Подать объявления
+                            </button>
+                        </div>
+                    </div>
+    
+                    <div class="work_box my-4 p-4">
+                        <div class="is-flex is-justify-content-space-between">
+    
+                            <div class="is-flex is-align-items-center">
+                                <figure class="image mr-3">
+                                    <img src="../../assets/i/pepsi.png" alt="pepsi">
+                                </figure>
+                                <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                            </div>
+    
+                            <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                                <div class="is-size-6 has-text-grey-light">Оплата</div>
+                                <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">в месяц</div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="my-4">
+                            <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                                вентиляции</h2>
+                            <p>
+                                Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                                Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                            </p>
+                        </div>
+    
+                        <div class="mt-4 columns">
+                            <div class="column">
+                                <div class="is-size-6">
+                                    Берлин
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">
+                                    03.03.2022
+                                </div>
+                            </div>
+                            <div class="column has-text-right">
+                                <button class="button is-uppercase has-text-white is-size-6">
+                                    смотреть вакансию
+                                </button>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="work_box my-4 p-4">
+                        <div class="is-flex is-justify-content-space-between">
+    
+                            <div class="is-flex is-align-items-center">
+                                <figure class="image mr-3">
+                                    <img src="../../assets/i/pepsi.png" alt="pepsi">
+                                </figure>
+                                <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                            </div>
+    
+                            <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                                <div class="is-size-6 has-text-grey-light">Оплата</div>
+                                <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">в месяц</div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="my-4">
+                            <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                                вентиляции</h2>
+                            <p>
+                                Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                                Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                            </p>
+                        </div>
+    
+                        <div class="mt-4 columns">
+                            <div class="column">
+                                <div class="is-size-6">
+                                    Берлин
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">
+                                    03.03.2022
+                                </div>
+                            </div>
+                            <div class="column has-text-right">
+                                <button class="button is-uppercase has-text-white is-size-6">
+                                    смотреть вакансию
+                                </button>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="work_box my-4 p-4">
+                        <div class="is-flex is-justify-content-space-between">
+    
+                            <div class="is-flex is-align-items-center">
+                                <figure class="image mr-3">
+                                    <img src="../../assets/i/pepsi.png" alt="pepsi">
+                                </figure>
+                                <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                            </div>
+    
+                            <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                                <div class="is-size-6 has-text-grey-light">Оплата</div>
+                                <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">в месяц</div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="my-4">
+                            <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                                вентиляции</h2>
+                            <p>
+                                Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                                Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                            </p>
+                        </div>
+    
+                        <div class="mt-4 columns">
+                            <div class="column">
+                                <div class="is-size-6">
+                                    Берлин
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">
+                                    03.03.2022
+                                </div>
+                            </div>
+                            <div class="column has-text-right">
+                                <button class="button is-uppercase has-text-white is-size-6">
+                                    смотреть вакансию
+                                </button>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="work_box my-4 p-4">
+                        <div class="is-flex is-justify-content-space-between">
+    
+                            <div class="is-flex is-align-items-center">
+                                <figure class="image mr-3">
+                                    <img src="../../assets/i/pepsi.png" alt="pepsi">
+                                </figure>
+                                <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                            </div>
+    
+                            <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                                <div class="is-size-6 has-text-grey-light">Оплата</div>
+                                <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">в месяц</div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="my-4">
+                            <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                                вентиляции</h2>
+                            <p>
+                                Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                                Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                            </p>
+                        </div>
+    
+                        <div class="mt-4 columns">
+                            <div class="column">
+                                <div class="is-size-6">
+                                    Берлин
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">
+                                    03.03.2022
+                                </div>
+                            </div>
+                            <div class="column has-text-right">
+                                <button class="button is-uppercase has-text-white is-size-6">
+                                    смотреть вакансию
+                                </button>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="work_box my-4 p-4">
+                        <div class="is-flex is-justify-content-space-between">
+    
+                            <div class="is-flex is-align-items-center">
+                                <figure class="image mr-3">
+                                    <img src="../../assets/i/pepsi.png" alt="pepsi">
+                                </figure>
+                                <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                            </div>
+    
+                            <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                                <div class="is-size-6 has-text-grey-light">Оплата</div>
+                                <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">в месяц</div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="my-4">
+                            <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                                вентиляции</h2>
+                            <p>
+                                Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                                Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                            </p>
+                        </div>
+    
+                        <div class="mt-4 columns">
+                            <div class="column">
+                                <div class="is-size-6">
+                                    Берлин
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">
+                                    03.03.2022
+                                </div>
+                            </div>
+                            <div class="column has-text-right">
+                                <button class="button is-uppercase has-text-white is-size-6">
+                                    смотреть вакансию
+                                </button>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="work_box my-4 p-4">
+                        <div class="is-flex is-justify-content-space-between">
+    
+                            <div class="is-flex is-align-items-center">
+                                <figure class="image mr-3">
+                                    <img src="../../assets/i/pepsi.png" alt="pepsi">
+                                </figure>
+                                <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                            </div>
+    
+                            <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                                <div class="is-size-6 has-text-grey-light">Оплата</div>
+                                <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">в месяц</div>
+                            </div>
+    
+                        </div>
+    
+                        <div class="my-4">
+                            <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                                вентиляции</h2>
+                            <p>
+                                Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                                Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                            </p>
+                        </div>
+    
+                        <div class="mt-4 columns">
+                            <div class="column">
+                                <div class="is-size-6">
+                                    Берлин
+                                </div>
+                                <div class="is-size-7 has-text-grey-light">
+                                    03.03.2022
+                                </div>
+                            </div>
+                            <div class="column has-text-right">
+                                <button class="button is-uppercase has-text-white is-size-6">
+                                    смотреть вакансию
+                                </button>
+                            </div>
+                        </div>
+    
+                    </div>
+                    <div class="mt-6">
+                        <nav class="pagination is-left " role="navigation" aria-label="pagination">
+                            <!--                    <a class="pagination-previous">Previous</a>-->
+                            <!--                    <a class="pagination-next">Next page</a>-->
+                            <ul class="pagination-list">
+                                <li><a class="pagination-link is-size-6" aria-label="Goto page 1">1</a></li>
+                                <li><span class="pagination-ellipsis is-size-6">&hellip;</span></li>
+                                <li><a class="pagination-link is-size-6" aria-label="Goto page 45">45</a></li>
+                                <li><a class="pagination-link is-current is-size-6" aria-label="Page 46"
+                                       aria-current="page">46</a></li>
+                                <li><a class="pagination-link is-size-6" aria-label="Goto page 47">47</a></li>
+                                <li><span class="pagination-ellipsis is-size-6">&hellip;</span></li>
+                                <li><a class="pagination-link is-size-6" aria-label="Goto page 86">86</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="work_sidebar p-3">
+                        <h2 class="is-size-5 has-text-weight-bold pb-2">Популярные категории</h2>
+    
+                        <ul class="p-0 mt-3">
+                            <li class="py-2 "><a href="">Автобизнес</a></li>
+                            <li class="py-2"><a href="">Административный персонал </a></li>
+                            <li class="py-2"><a href="">Аудит </a></li>
+                            <li class="py-2"><a href="">Банки </a></li>
+                            <li class="py-2"><a href="">Без опыта </a></li>
+                            <li class="py-2"><a href="">Бухгалтерия </a></li>
+                            <li class="py-2"><a href="">Водители </a></li>
+                            <li class="py-2"><a href="">Гостиницы </a></li>
+                            <li class="py-2"><a href="">Дизайн / Графика </a></li>
+                            <li class="py-2"><a href="">Закупки / Снабжение </a></li>
+                            <li class="py-2"><a href="">Издательское дело </a></li>
+                            <li class="py-2"><a href="">Инвестиции </a></li>
+                            <li class="py-2"><a href="">Консалтинг </a></li>
+                            <li class="py-2"><a href="">Курьеры </a></li>
+                            <li class="py-2"><a href="">Лизинг</a></li>
+                            <li class="py-2 "><a href="">Автобизнес</a></li>
+                            <li class="py-2"><a href="">Административный персонал </a></li>
+                            <li class="py-2"><a href="">Аудит </a></li>
+                            <li class="py-2"><a href="">Банки </a></li>
+                            <li class="py-2"><a href="">Без опыта </a></li>
+                            <li class="py-2"><a href="">Бухгалтерия </a></li>
+                            <li class="py-2"><a href="">Водители </a></li>
+                            <li class="py-2"><a href="">Гостиницы </a></li>
+                            <li class="py-2"><a href="">Дизайн / Графика </a></li>
+                            <li class="py-2"><a href="">Закупки / Снабжение </a></li>
+                            <li class="py-2"><a href="">Издательское дело </a></li>
+                            <li class="py-2"><a href="">Инвестиции </a></li>
+                            <li class="py-2"><a href="">Консалтинг </a></li>
+                            <li class="py-2"><a href="">Курьеры </a></li>
+                            <li class="py-2"><a href="">Лизинг</a></li>
+                        </ul>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="subscribe px-3 py-6">
+        <div class="container">
+            <h2 class="is-size-4 has-text-weight-bold has-text-white my-4 montserrat">
+                Будьте в курсе событий! Подпишитесь на новые вакансии!
+            </h2>
+            <div class="has-text-white">
+                <p>
+                    Подпишитесь на получение новых вакансий, которые появляются на сайте. Выберите рубрику вакансий, которая
+                    Вас
+                    интересует, если рубрика выбрана не будет, то Вы будете получать уведомления обо всех новых вакансиях.
+                </p>
+            </div>
+    
+            <form action="">
+                <div class="columns my-4">
+                    <div class="column">
+                        <div class="field">
+                            <label class="label has-text-white">Email</label>
+                            <div class="control">
+                                <input class="input border-none" type="email" placeholder="Email*">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="field">
+                            <label class="label has-text-white">Выберите рубрику</label>
+                            <v-select
+                                    style="width: 100%" class="has-background-white-bis border-none"
+                                    :options="rubric"
+                                    v-model="selectedRubric"
+                            >
+                            </v-select>
+                        </div>
+                    </div>
+                    <div class="column is-one-fifth isw is-flex is-align-items-end is-justify-content-end">
+                        <label > </label>
+                        <button class="button is-uppercase has-text-white is-fullwidth">Подписаться на рассылку</button>
+                    </div>
+                </div>
+            </form>
+            <div class="field has-text-white is-size-7">
+                <input class="is-checkradio" id="checkConf" type="checkbox" name="checkConf" checked="checked">
+                <label for="checkConf" class="is-size-7 mt-2">Ознакомлен и согласен с политикой конфиденциальности</label>
+            </div>
+        </div>
+    </section>
+    <section class="px-3 py-6 newsMain">
+        <div class="container">
+            <h2 class="is-size-4 montserrat has-text-weight-bold">Самая свежая информация </h2>
+            <div class="columns is-multiline mt-4">
+                <div class="column is-one-third-desktop">
+    
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="">
+                                <figure class="image is-4by3">
+                                    <img src="../../assets/i/news-01.png" alt="Placeholder image">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="card-content px-0">
+                            <h3 class="is-size-5 has-text-weight-bold">Шеф-повар в Германии - как выглядит работа и на какой
+                                заработок можно рассчитывать? </h3>
+                            <div class="content py-3">
+                                <p>
+                                    Бывает, поиск работы затягивается и напряжение возрастает. Мало того, что вы сами
+                                    начинаете нервничать, так еще и окружающие подливают масла в огонь: «Ну неужели ничего
+                                    нет?», «А ты все еще без работы?», «Поторопись и найди уже хоть что-то».
+                                </p>
+                                <a href="" class="orange is-size-6">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="column is-one-third-desktop">
+    
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="">
+                                <figure class="image is-4by3">
+                                    <img src="../../assets/i/news-02.png" alt="Placeholder image">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="card-content px-0">
+                            <h3 class="is-size-5 has-text-weight-bold">Безналоговый коронный бонус получат миллионы
+                                сотрудников в Германии </h3>
+                            <div class="content py-3">
+                                <p>
+                                    Бывает, поиск работы затягивается и напряжение возрастает. Мало того, что вы сами
+                                    начинаете нервничать, так еще и окружающие подливают масла в огонь: «Ну неужели ничего
+                                    нет?», «А ты все еще без работы?», «Поторопись и найди уже хоть что-то».
+                                </p>
+                                <a href="" class="orange is-size-6">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+                <div class="column is-one-third-desktop">
+    
+                    <div class="card">
+                        <div class="card-image">
+                            <a href="">
+                                <figure class="image is-4by3">
+                                    <img src="../../assets/i/news-03.png" alt="Placeholder image">
+                                </figure>
+                            </a>
+                        </div>
+                        <div class="card-content px-0">
+                            <h3 class="is-size-5 has-text-weight-bold">Алименты в Германии - примеры как рассчитать их сумму
+                                в 2022 году </h3>
+                            <div class="content py-3">
+                                <p>
+                                    Бывает, поиск работы затягивается и напряжение возрастает. Мало того, что вы сами
+                                    начинаете нервничать, так еще и окружающие подливают масла в огонь: «Ну неужели ничего
+                                    нет?», «А ты все еще без работы?», «Поторопись и найди уже хоть что-то».
+                                </p>
+                                <a href="" class="orange is-size-6">Подробнее</a>
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<!--JS-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="https://unpkg.com/vue-select@latest"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/vueSfdevelop.js"></script>
+</body>
+
+</html>

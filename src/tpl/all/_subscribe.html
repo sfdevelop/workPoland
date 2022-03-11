@@ -1,0 +1,46 @@
+<section class="subscribe px-3 py-6">
+    <div class="container">
+        <h2 class="is-size-4 has-text-weight-bold has-text-white my-4 montserrat">
+            Будьте в курсе событий! Подпишитесь на новые вакансии!
+        </h2>
+        <div class="has-text-white">
+            <p>
+                Подпишитесь на получение новых вакансий, которые появляются на сайте. Выберите рубрику вакансий, которая
+                Вас
+                интересует, если рубрика выбрана не будет, то Вы будете получать уведомления обо всех новых вакансиях.
+            </p>
+        </div>
+
+        <form action="">
+            <div class="columns my-4">
+                <div class="column">
+                    <div class="field">
+                        <label class="label has-text-white">Email</label>
+                        <div class="control">
+                            <input class="input border-none" type="email" placeholder="Email*">
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="field">
+                        <label class="label has-text-white">Выберите рубрику</label>
+                        <v-select
+                                style="width: 100%" class="has-background-white-bis border-none"
+                                :options="rubric"
+                                v-model="selectedRubric"
+                        >
+                        </v-select>
+                    </div>
+                </div>
+                <div class="column is-one-fifth isw is-flex is-align-items-end is-justify-content-end">
+                    <label > </label>
+                    <button class="button is-uppercase has-text-white is-fullwidth">Подписаться на рассылку</button>
+                </div>
+            </div>
+        </form>
+        <div class="field has-text-white is-size-7">
+            <input class="is-checkradio" id="checkConf" type="checkbox" name="checkConf" checked="checked">
+            <label for="checkConf" class="is-size-7 mt-2">Ознакомлен и согласен с политикой конфиденциальности</label>
+        </div>
+    </div>
+</section>

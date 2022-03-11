@@ -1,0 +1,140 @@
+.header {
+  background: url("../../assets/i/main-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .opacity {
+    background-color: $white-ter;
+  }
+
+  p {
+    font-size: 22px;
+  }
+}
+.menu{
+  background: #fff!important;
+}
+
+.is-22x22 {
+  width: 22px;
+  height: 22px;
+}
+
+.yellow {
+  color: $yellow;
+}
+
+.vs--searchable .vs__dropdown-toggle, .border-none {
+  border: none !important;
+  border-radius: 0px !important;
+}
+
+.vs__dropdown-toggle {
+  padding: 0 !important;
+}
+
+.vs__search, .vs__search:focus {
+  margin: 0 !important;
+}
+
+#vs1__combobox {
+  height: 100%;
+}
+
+.button {
+  background: linear-gradient(#fab96d 0%, #f80 100%);
+  border: none;
+  border-radius: 0px;
+
+  &:hover {
+    background: linear-gradient(#c2e7ff 0%, #7a9aaf 100%);
+  }
+}
+
+.button {
+  &.revers {
+    background: linear-gradient(#c2e7ff 0%, #7a9aaf 100%);
+
+    &:hover {
+      background: linear-gradient(#fab96d 0%, #f80 100%);
+    }
+  }
+
+  &.bg-none {
+    border: none !important;
+    background: none !important;
+    color: $black !important;
+
+    &:hover {
+      background: linear-gradient(#c2e7ff 0%, #7a9aaf 100%)!important;
+      color: $white-bis!important;
+    }
+  }
+}
+.work{
+  &_box{
+    border: 1px solid rgba(122, 154, 175, 0.4);
+  }
+  &_sidebar{
+    background-color: $grey-light-ultra;
+    h2{
+      border-bottom: 1px solid $yellow;
+    }
+    ul{
+      li{
+        border-bottom: 1px solid $white;
+        a{
+          color: $black;
+          &:hover{
+            color: $yellow;
+          }
+        }
+      }
+    }
+  }
+}
+
+.pagination-link:hover, .pagination-next:hover, .pagination-previous:hover, .pagination-link{
+  border-color: transparent!important;
+}
+.pagination-link.is-current{
+  background-color: $yellow;
+}
+.pagination-link:hover{
+  background-color: $yellow;
+  color: $white;
+}
+.subscribe{
+  background-image: url("../../assets/i/subscribe-bg.png") ;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.v-select{
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  box-shadow: none;
+  font-size: 1rem;
+  height: 2.5em;
+  line-height: 1.5;
+  padding: calc(.5em - 1px) calc(.75em - 1px);
+  position: relative;
+  vertical-align: top;
+}
+.is-checkradio[type="checkbox"] + label::after {
+  width: .5rem;
+  height: .7rem;
+  top: .305rem;
+  left: .6rem;
+}
+.card{
+  border-radius: 0px!important;
+  box-shadow: none;
+}
+.orange{
+  color: $yellow;
+  &:hover{
+    color: $grey-light;
+  }
+}
