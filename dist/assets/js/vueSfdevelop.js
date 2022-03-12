@@ -5,6 +5,8 @@ var app = new Vue({
     data: {
         selectedCity: 'Выберите город',
         selectedRubric: 'Выберите рубрику',
+        isActive: true,
+        isDropdown:false,
         options: [
             'Гамбург',
             'Мюнхен',
@@ -25,5 +27,13 @@ var app = new Vue({
             'Рубрика9',
             'Рубрика10',
         ],
-    }
+    },
+    methods: {
+        openBurger: function () {
+            this.isActive = !this.isActive;
+        },
+        openDropdown: function() {
+            this.isDropdown = !this.isDropdown;
+        },
+    },
 })

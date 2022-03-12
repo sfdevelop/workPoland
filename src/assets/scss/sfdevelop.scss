@@ -48,6 +48,7 @@
 
   &:hover {
     background: linear-gradient(#c2e7ff 0%, #7a9aaf 100%);
+    color: #fff!important;
   }
 }
 
@@ -136,5 +137,51 @@
   color: $yellow;
   &:hover{
     color: $grey-light;
+  }
+}
+
+.howWork{
+
+    background-image: url("../../assets/i/how_to_work.png");
+    background-repeat: no-repeat;
+    background-position: center top;
+  p{
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+}
+a.button{
+  &:hover{
+    color: $white!important;
+  }
+}
+.max-200{
+  max-width: 200px;
+}
+
+footer {
+  background-color: #232323;
+
+  a {
+    color: $white;
+
+    &:hover {
+      color: $white;
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    li {
+      list-style-type: none;
+    }
+  }
+  .out_fonts{
+    font-size: 90%;
+  }
+  .media + .media{
+    border: none;
+    //margin-top: 0;
+    padding-top: 0;
   }
 }
