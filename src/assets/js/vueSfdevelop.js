@@ -7,6 +7,13 @@ var app = new Vue({
         selectedRubric: 'Выберите рубрику',
         isActive: true,
         isDropdown:false,
+        isAuth:false,
+        isVacancy:false,
+        isOfferJob:false,
+        quickActive: false,
+        isPhone: false,
+        phone: '',
+
         options: [
             'Гамбург',
             'Мюнхен',
@@ -34,6 +41,22 @@ var app = new Vue({
         },
         openDropdown: function() {
             this.isDropdown = !this.isDropdown;
+        },
+        openQuick: function() {
+            this.quickActive = !this.quickActive;
+        },
+        openVacancy: function() {
+            this.isVacancy = !this.isVacancy;
+        },
+        openOfferJob: function() {
+            this.isOfferJob = !this.isOfferJob;
+        },
+        openDropdownAuth: function() {
+            this.isAuth = !this.isAuth;
+        },
+        openPhone: function() {
+            this.isPhone = !this.isPhone;
+            this.phone = '+38 093 999 99 99'
         },
     },
 })

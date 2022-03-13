@@ -10,7 +10,17 @@
 @media(min-width:576px)and(max-width:767px) {}
 
 // ----------------------------------------mobile
-@media(max-width:1024px) {
+@media(max-width:$desktop) {
+  .howWork{
+    .columns{
+      .column{
+        div{
+          padding-left: 0!important;
+          padding-right: 0!important;
+        }
+      }
+    }
+  }
   .navbar-brand {
     justify-content: space-between;
   }
@@ -45,7 +55,7 @@
   }
   .howWork{
     background-image: none!important;
-    background-color: $grey-light;
+    background-color: $grey-light-ultra;
     .column{
       color: $black!important;
     }
@@ -61,5 +71,22 @@
   }
   .v-select{
     font-size: 13px!important;
+  }
+  .quickview{
+    max-width: 100%;
+    ul{
+      max-height: 100%!important;
+    }
+  }
+  .columns.is-reversed-touch {
+    flex-direction: column-reverse;
+    display: flex;
+  }
+}
+
+@media(max-width: $tablet) {
+  .columns.is-reversed-mobile {
+    flex-direction: column-reverse;
+    display: flex;
   }
 }

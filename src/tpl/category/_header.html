@@ -1,0 +1,39 @@
+<section class="header mt-6">
+    <section class="hero is-small">
+        <center>
+            <div class="hero-body">
+                <div class="container">
+                    <div class="opacity p-6">
+                        <form>
+                            <div class="is-flex is-flex-column-touch">
+                                <input class="input has-background-white-bis border-none" type="text" name="" id=""
+                                       placeholder="Введите ключевые слова (например: сантехник)">
+
+                                <v-select
+                                        style="width: 100%" class="has-background-white-bis border-none"
+                                        :options="options"
+                                        v-model="selectedCity"
+                                >
+                                    <template slot="selected-option" scope="option">
+                                        <img class="mr-2" src="assets/i/svg/location.svg"/> {{ option.label }}
+                                    </template>
+                                    <template slot="option" scope="option">
+                                        <img class="mr-2" src="assets/i/svg/location.svg"/> {{ option.label }}
+                                    </template>
+                                </v-select>
+
+                                <button type="submit" class="button is-uppercase has-text-white-bis">
+                                    <figure class="image is-22x22 mr-3">
+                                        <img src="../../assets/i/svg/search.svg" alt="search">
+                                    </figure>
+                                    найти вакансию
+                                </button>
+
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </section>
+</section>

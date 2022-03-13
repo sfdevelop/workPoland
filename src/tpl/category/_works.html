@@ -1,0 +1,554 @@
+<section class="work p-3 mt-6">
+    <div class="container is-fullhd">
+
+        <a href=""
+           class="button revers is-uppercase has-text-white is-hidden-desktop mb-4"
+            @click.prevent="openQuick"
+        >
+            <i class="fa-solid fa-filter mr-3"></i>  Фильтр
+        </a>
+
+        //= _quick.html
+        <div class="columns">
+            <div class="column is-hidden-touch">
+
+                    <div class="work_sidebar left-sidebar p-3">
+                        <h2 class="is-size-5 has-text-weight-bold pb-2">Отобрать вакансии</h2>
+
+                        <h3 class="is-size-6 has-text-weight-bold mt-3">Вариант оплаты</h3>
+
+                        <ul class="p-0 mt-1">
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall" type="checkbox"
+                                           name="exampleCheckboxSmall" checked="checked">
+                                    <label for="exampleCheckboxSmall" class="is-size-6">месяц</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal2" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal2" class="is-size-6">за час</label>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h3 class="is-size-6 has-text-weight-bold mt-3">Город</h3>
+
+                        <ul class="p-0 mt-1">
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall3" type="checkbox"
+                                           name="exampleCheckboxSmall3" checked="checked">
+                                    <label for="exampleCheckboxSmall" class="is-size-6">Аугсбург</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal4" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal4" class="is-size-6">Ахен</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal5" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal5" class="is-size-6">Бергиш-Гладбах</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal6" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal6" class="is-size-6">Берлин</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal7" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal7" class="is-size-6">Берлин</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal8" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal8" class="is-size-6">Бонн</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal9" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal9" class="is-size-6">Боттроп</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal10" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal10" class="is-size-6">Бохум</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal11" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal11" class="is-size-6">Брауншвейг</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal12" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal12" class="is-size-6">Бремен</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal13" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal13" class="is-size-6">Бремерхафен</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal14" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal14" class="is-size-6">Висбаден</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal15" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal15" class="is-size-6">Вольфсбург</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal16" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal16" class="is-size-6">Вупперталь</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmal17" type="checkbox"
+                                           name="exampleCheckboxSmall">
+                                    <label for="exampleCheckboxSmal17" class="is-size-6">Вюрцбург</label>
+                                </div>
+                            </li>
+                        </ul>
+
+                        <h3 class="is-size-6 has-text-weight-bold mt-3">Вакансия</h3>
+
+                        <ul class="p-0 mt-1">
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall20" type="checkbox"
+                                           name="exampleCheckboxSmal20" checked="checked">
+                                    <label for="exampleCheckboxSmall20" class="is-size-6">Автомаляр</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall21" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall21" class="is-size-6">Автомаляр</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall22" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall22" class="is-size-6">Автомеханик</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall23" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall23" class="is-size-6">Внутрянщик </label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall24" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall24" class="is-size-6">Водитель на доставку </label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall25" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall25" class="is-size-6">Водитель СЕ</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall26" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall26" class="is-size-6">Водителя в службу
+                                        доставки </label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall27" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall27" class="is-size-6">Гипсокартонщик </label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall28" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall28" class="is-size-6">Инженер-строитель </label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall29" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall29" class="is-size-6">Каменщики </label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall30" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall30" class="is-size-6">Кузовщик - слесарь </label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall31" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall31" class="is-size-6">Кур'єр </label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall32" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall32" class="is-size-6">Механик</label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall34" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall34" class="is-size-6">Монтажник мебели </label>
+                                </div>
+                            </li>
+                            <li class="pt-1 border-none">
+                                <div class="field">
+                                    <input class="is-checkradio is-small" id="exampleCheckboxSmall33" type="checkbox"
+                                           name="exampleCheckboxSmal20">
+                                    <label for="exampleCheckboxSmall33" class="is-size-6">Монтажные работы </label>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="mt-5 mb-3">
+                            <a href="" class="button is-uppercase has-text-white is-size-7">Применить</a>
+                            <a href="" class="button is-uppercase revers bg-none orange is-size-7">очистить</a>
+                        </div>
+                    </div>
+
+            </div>
+            <div class="column is-three-quarters-desktop">
+                <div class="work_box mb-4 p-4">
+                    <div class="is-flex is-justify-content-space-between">
+
+                        <div class="is-flex is-align-items-center">
+                            <figure class="image mr-3">
+                                <img src="../../assets/i/pepsi.png" alt="pepsi">
+                            </figure>
+                            <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                        </div>
+
+                        <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                            <div class="is-size-6 has-text-grey-light">Оплата</div>
+                            <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">в месяц</div>
+                        </div>
+
+                    </div>
+
+                    <div class="my-4">
+                        <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                            вентиляции</h2>
+                        <p>
+                            Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                            Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                        </p>
+                    </div>
+
+                    <div class="mt-4 columns">
+                        <div class="column">
+                            <div class="is-size-6">
+                                Берлин
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">
+                                03.03.2022
+                            </div>
+                        </div>
+                        <div class="column has-text-right">
+                            <button class="button is-uppercase has-text-white is-size-6">
+                                смотреть вакансию
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="work_box mb-4 p-4">
+                    <div class="is-flex is-justify-content-space-between">
+
+                        <div class="is-flex is-align-items-center">
+                            <figure class="image mr-3">
+                                <img src="../../assets/i/pepsi.png" alt="pepsi">
+                            </figure>
+                            <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                        </div>
+
+                        <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                            <div class="is-size-6 has-text-grey-light">Оплата</div>
+                            <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">в месяц</div>
+                        </div>
+
+                    </div>
+
+                    <div class="my-4">
+                        <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                            вентиляции</h2>
+                        <p>
+                            Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                            Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                        </p>
+                    </div>
+
+                    <div class="mt-4 columns">
+                        <div class="column">
+                            <div class="is-size-6">
+                                Берлин
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">
+                                03.03.2022
+                            </div>
+                        </div>
+                        <div class="column has-text-right">
+                            <button class="button is-uppercase has-text-white is-size-6">
+                                смотреть вакансию
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="work_box mb-4 p-4">
+                    <div class="is-flex is-justify-content-space-between">
+
+                        <div class="is-flex is-align-items-center">
+                            <figure class="image mr-3">
+                                <img src="../../assets/i/pepsi.png" alt="pepsi">
+                            </figure>
+                            <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                        </div>
+
+                        <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                            <div class="is-size-6 has-text-grey-light">Оплата</div>
+                            <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">в месяц</div>
+                        </div>
+
+                    </div>
+
+                    <div class="my-4">
+                        <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                            вентиляции</h2>
+                        <p>
+                            Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                            Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                        </p>
+                    </div>
+
+                    <div class="mt-4 columns">
+                        <div class="column">
+                            <div class="is-size-6">
+                                Берлин
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">
+                                03.03.2022
+                            </div>
+                        </div>
+                        <div class="column has-text-right">
+                            <button class="button is-uppercase has-text-white is-size-6">
+                                смотреть вакансию
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="work_box mb-4 p-4">
+                    <div class="is-flex is-justify-content-space-between">
+
+                        <div class="is-flex is-align-items-center">
+                            <figure class="image mr-3">
+                                <img src="../../assets/i/pepsi.png" alt="pepsi">
+                            </figure>
+                            <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                        </div>
+
+                        <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                            <div class="is-size-6 has-text-grey-light">Оплата</div>
+                            <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">в месяц</div>
+                        </div>
+
+                    </div>
+
+                    <div class="my-4">
+                        <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                            вентиляции</h2>
+                        <p>
+                            Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                            Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                        </p>
+                    </div>
+
+                    <div class="mt-4 columns">
+                        <div class="column">
+                            <div class="is-size-6">
+                                Берлин
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">
+                                03.03.2022
+                            </div>
+                        </div>
+                        <div class="column has-text-right">
+                            <button class="button is-uppercase has-text-white is-size-6">
+                                смотреть вакансию
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="work_box mb-4 p-4">
+                    <div class="is-flex is-justify-content-space-between">
+
+                        <div class="is-flex is-align-items-center">
+                            <figure class="image mr-3">
+                                <img src="../../assets/i/pepsi.png" alt="pepsi">
+                            </figure>
+                            <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                        </div>
+
+                        <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                            <div class="is-size-6 has-text-grey-light">Оплата</div>
+                            <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">в месяц</div>
+                        </div>
+
+                    </div>
+
+                    <div class="my-4">
+                        <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                            вентиляции</h2>
+                        <p>
+                            Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                            Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                        </p>
+                    </div>
+
+                    <div class="mt-4 columns">
+                        <div class="column">
+                            <div class="is-size-6">
+                                Берлин
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">
+                                03.03.2022
+                            </div>
+                        </div>
+                        <div class="column has-text-right">
+                            <button class="button is-uppercase has-text-white is-size-6">
+                                смотреть вакансию
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="work_box mb-4 p-4">
+                    <div class="is-flex is-justify-content-space-between">
+
+                        <div class="is-flex is-align-items-center">
+                            <figure class="image mr-3">
+                                <img src="../../assets/i/pepsi.png" alt="pepsi">
+                            </figure>
+                            <h3 class="is-size-5 has-text-weight-bold">Pepsi</h3>
+                        </div>
+
+                        <div class="is-flex is-flex-direction-column is-justify-content-center is-align-items-end">
+                            <div class="is-size-6 has-text-grey-light">Оплата</div>
+                            <div class="is-size-6 has-text-weight-bold">3000 <span class="is-size-6 ml-2">EUR</span>
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">в месяц</div>
+                        </div>
+
+                    </div>
+
+                    <div class="my-4">
+                        <h2 class="is-size-5 has-text-weight-bold mb-4 montserrat">Монтажник или помощник по
+                            вентиляции</h2>
+                        <p>
+                            Компания Пепси наймет монтажника или монтажника вентиляции. Немедленно работайте. Работа в
+                            Мюнхене. Свяжитесь с нами, если вы заинтересованы
+                        </p>
+                    </div>
+
+                    <div class="mt-4 columns">
+                        <div class="column">
+                            <div class="is-size-6">
+                                Берлин
+                            </div>
+                            <div class="is-size-7 has-text-grey-light">
+                                03.03.2022
+                            </div>
+                        </div>
+                        <div class="column has-text-right">
+                            <button class="button is-uppercase has-text-white is-size-6">
+                                смотреть вакансию
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="mt-6">
+                    <nav class="pagination is-left " role="navigation" aria-label="pagination">
+                        <!--                    <a class="pagination-previous">Previous</a>-->
+                        <!--                    <a class="pagination-next">Next page</a>-->
+                        <ul class="pagination-list">
+                            <li><a class="pagination-link is-size-6" aria-label="Goto page 1">1</a></li>
+                            <li><span class="pagination-ellipsis is-size-6">&hellip;</span></li>
+                            <li><a class="pagination-link is-size-6" aria-label="Goto page 45">45</a></li>
+                            <li><a class="pagination-link is-current is-size-6" aria-label="Page 46"
+                                   aria-current="page">46</a></li>
+                            <li><a class="pagination-link is-size-6" aria-label="Goto page 47">47</a></li>
+                            <li><span class="pagination-ellipsis is-size-6">&hellip;</span></li>
+                            <li><a class="pagination-link is-size-6" aria-label="Goto page 86">86</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

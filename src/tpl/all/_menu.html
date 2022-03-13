@@ -8,11 +8,26 @@
                 </a>
 
                 <div class="is-flex is-right is-hidden-desktop">
-                    <a class="navbar-item" href="">
-                        <figure class="image">
-                            <img src="assets/i/svg/avatar_non_photo.svg">
-                        </figure>
-                    </a>
+                    <div class="navbar-item">
+                        <div class="control">
+                            <div class="drop"
+                                 @click="openDropdownAuth"
+                            >
+                                <figure class="image">
+                                    <img src="assets/i/svg/avatar_non_photo.svg">
+                                </figure>
+                            </div>
+
+                            <div class="box dropdown is-right"
+                                 :class="{ 'is-open': isAuth }"
+                            >
+                                <ul class="is-white ">
+                                    <li class="py-2"><a class="nav-item has-text-black">Авторизация</a></li>
+                                    <li class="py-2"><a class="nav-item has-text-black">Регистрация</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div class="navbar-item">
                         <div class="control">
                             <div class="drop"
@@ -67,12 +82,23 @@
                         предлагаю работу
                     </a>
 
-                    <a class="navbar-item is-uppercase mx-6 is-hidden-touch">
-                        <figure class="image">
-                            <img src="assets/i/svg/avatar_non_photo.svg" alt="non photo">
-                        </figure>
-                        <span class="ml-3">Вход</span>
-                    </a>
+                    <div class="navbar-item has-dropdown  is-hoverable is-hidden-touch mx-6">
+                        <a class="navbar-link">
+                            <figure class="image">
+                                <img src="assets/i/svg/avatar_non_photo.svg" alt="non photo">
+                            </figure>
+                            <span class="ml-3">Кабинет</span>
+                        </a>
+
+                        <div class="navbar-dropdown is-right">
+                            <a class="navbar-item ">
+                                Авторизация
+                            </a>
+                            <a class="navbar-item">
+                                Регистрация
+                            </a>
+                        </div>
+                    </div>
 
                     <div class="navbar-item has-dropdown  is-hoverable is-hidden-touch">
                         <a class="navbar-link">

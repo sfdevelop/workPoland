@@ -11,13 +11,16 @@
     font-size: 22px;
   }
 }
-.menu{
-  background: #fff!important;
+.has-border-bottom{
+  border-bottom: 1px solid $white;
+  &:last-child{
+    border-bottom: none;
+    padding-bottom: 0!important;
+  }
 }
 
-.is-22x22 {
-  width: 22px;
-  height: 22px;
+.menu {
+  background: #fff !important;
 }
 
 .yellow {
@@ -48,7 +51,7 @@
 
   &:hover {
     background: linear-gradient(#c2e7ff 0%, #7a9aaf 100%);
-    color: #fff!important;
+    color: #fff !important;
   }
 }
 
@@ -61,57 +64,95 @@
     }
   }
 
+  &.has-transpired {
+    border: 1px solid $yellow;
+    background: none !important;
+    color: $yellow !important;
+
+    &:hover{
+      border: 1px solid $black;
+      color: $black !important;
+    }
+  }
+
   &.bg-none {
     border: none !important;
     background: none !important;
     color: $black !important;
 
     &:hover {
-      background: linear-gradient(#c2e7ff 0%, #7a9aaf 100%)!important;
-      color: $white-bis!important;
+      background: linear-gradient(#c2e7ff 0%, #7a9aaf 100%) !important;
+      color: $white-bis !important;
     }
   }
 }
-.work{
-  &_box{
+.howWorkAll{
+  background-color: $grey-light-ultra;
+}
+.work {
+  &_box {
     border: 1px solid rgba(122, 154, 175, 0.4);
   }
-  &_sidebar{
+
+  &_sidebar {
     background-color: $grey-light-ultra;
-    h2{
+
+    h2 {
       border-bottom: 1px solid $yellow;
     }
-    ul{
-      li{
+
+    ul {
+      li {
         border-bottom: 1px solid $white;
-        a{
+
+        a {
           color: $black;
-          &:hover{
+
+          &:hover {
             color: $yellow;
           }
         }
       }
     }
+
+    label {
+      margin-top: -10px;
+    }
+  }
+
+  .is-checkradio[type="checkbox"] + label::before, .is-checkradio[type="radio"] + label::before {
+    top: 5px;
+  }
+
+  .is-checkradio[type="checkbox"].is-small + label::after {
+    width: .28125rem;
+    height: .45rem;
+    top: .60375rem;
+    left: .45rem;
   }
 }
 
-.pagination-link:hover, .pagination-next:hover, .pagination-previous:hover, .pagination-link{
-  border-color: transparent!important;
+.pagination-link:hover, .pagination-next:hover, .pagination-previous:hover, .pagination-link {
+  border-color: transparent !important;
 }
-.pagination-link.is-current{
+
+.pagination-link.is-current {
   background-color: $yellow;
 }
-.pagination-link:hover{
+
+.pagination-link:hover {
   background-color: $yellow;
   color: $white;
 }
-.subscribe{
-  background-image: url("../../assets/i/subscribe-bg.png") ;
+
+.subscribe {
+  background-image: url("../../assets/i/subscribe-bg.png");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
-.v-select{
+
+.v-select {
   align-items: center;
   border: 1px solid transparent;
   border-radius: 4px;
@@ -123,39 +164,46 @@
   position: relative;
   vertical-align: top;
 }
+
 .is-checkradio[type="checkbox"] + label::after {
   width: .5rem;
   height: .7rem;
   top: .305rem;
   left: .6rem;
 }
-.card{
-  border-radius: 0px!important;
+
+.card {
+  border-radius: 0px !important;
   box-shadow: none;
 }
-.orange{
-  color: $yellow;
-  &:hover{
+
+.orange {
+  color: $yellow!important;
+
+  &:hover {
     color: $grey-light;
   }
 }
 
-.howWork{
+.howWork {
 
-    background-image: url("../../assets/i/how_to_work.png");
-    background-repeat: no-repeat;
-    background-position: center top;
-  p{
+  background-image: url("../../assets/i/how_to_work.png");
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  p {
     margin-top: 15px;
     margin-bottom: 15px;
   }
 }
-a.button{
-  &:hover{
-    color: $white!important;
+
+a.button {
+  &:hover {
+    color: $white !important;
   }
 }
-.max-200{
+
+.max-200 {
   max-width: 200px;
 }
 
@@ -176,12 +224,35 @@ footer {
       list-style-type: none;
     }
   }
-  .out_fonts{
+
+  .out_fonts {
     font-size: 90%;
   }
-  .media + .media{
+
+  .media + .media {
     border: none;
     //margin-top: 0;
     padding-top: 0;
   }
+}
+
+.left-sidebar {
+  ul {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+}
+
+.breadcrumb {
+  a {
+    color: $yellow;
+  }
+}
+
+.hr {
+  border-bottom: 1px solid $grey-light;
+}
+
+.has-margin-top {
+  margin-top: 3px;
 }
