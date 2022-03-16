@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="assets/i/favicon.png" type="img/x-icon">
+
+    <!-- Useful meta tags -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+
+    <link href="https://use.fontawesome.com/releases/v6.0.0/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+
+    <title>polandWork</title>
+
+</head>
+
+<body>
+<div id="app">
+    <section class="menu">
+    
+        <nav class="navbar has-background-white-bis is-fixed-top is-white " role="navigation" aria-label="main navigation">
+            <div class="container  is-fullhd px-3">
+                <div class="navbar-brand is-flex-mobile">
+                    <a class="navbar-item" href="https://bulma.io">
+                        <img src="https://bulma.io/images/bulma-logo.png" width="112" height="28">
+                    </a>
+    
+                    <div class="is-flex is-right is-hidden-desktop">
+                        <div class="navbar-item">
+                            <div class="control">
+                                <div class="drop"
+                                     @click="openDropdownAuth"
+                                >
+                                    <figure class="image">
+                                        <img src="assets/i/svg/avatar_non_photo.svg">
+                                    </figure>
+                                </div>
+    
+                                <div class="box dropdown is-right"
+                                     :class="{ 'is-open': isAuth }"
+                                >
+                                    <ul class="is-white ">
+                                        <li class="py-2"><a class="nav-item has-text-black">Авторизация</a></li>
+                                        <li class="py-2"><a class="nav-item has-text-black">Регистрация</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="navbar-item">
+                            <div class="control">
+                                <div class="drop"
+                                     @click="openDropdown"
+                                >
+                                    RU
+                                </div>
+    
+                                <div class="box dropdown is-right"
+                                     :class="{ 'is-open': isDropdown }"
+                                >
+                                    <ul class="is-white ">
+                                        <li><a class="nav-item has-text-black">PL</a></li>
+                                        <li><a class="nav-item has-text-black">DE</a></li>
+                                        <li><a class="nav-item has-text-black">EN</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <a role="button"
+                           class="navbar-burger"
+                           aria-label="menu"
+                           aria-expanded="false"
+                           data-target="navbarBasicExample"
+                           @click="openBurger"
+                        >
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                            <span aria-hidden="true"></span>
+                        </a>
+                    </div>
+    
+    
+                </div>
+    
+                <div id="navbarBasicExample"
+                     :class="{ 'navbar-menu': isActive }">
+                    <div class="navbar-start">
+    
+                    </div>
+    
+                    <div class="navbar-end">
+                        <a class="navbar-item is-uppercase">
+                            Главная
+                        </a>
+    
+                        <a class="navbar-item is-uppercase">
+                            ищу работу
+                        </a>
+    
+                        <a class="navbar-item is-uppercase">
+                            предлагаю работу
+                        </a>
+    
+                        <div class="navbar-item has-dropdown  is-hoverable is-hidden-touch mx-6">
+                            <a class="navbar-link">
+                                <figure class="image">
+                                    <img src="assets/i/svg/avatar_non_photo.svg" alt="non photo">
+                                </figure>
+                                <span class="ml-3">Кабинет</span>
+                            </a>
+    
+                            <div class="navbar-dropdown is-right">
+                                <a class="navbar-item ">
+                                    Авторизация
+                                </a>
+                                <a class="navbar-item">
+                                    Регистрация
+                                </a>
+                            </div>
+                        </div>
+    
+                        <div class="navbar-item has-dropdown  is-hoverable is-hidden-touch">
+                            <a class="navbar-link">
+                                RU
+                            </a>
+    
+                            <div class="navbar-dropdown is-right">
+                                <a class="navbar-item ">
+                                    PL
+                                </a>
+                                <a class="navbar-item">
+                                    EN
+                                </a>
+                                <a class="navbar-item">
+                                    DE
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    
+    </section>
+    <section class="header mt-6">
+        <section class="hero is-small">
+            <center>
+                <div class="hero-body">
+                    <div class="container">
+                        <div class="opacity p-6">
+                            <form>
+                                <div class="is-flex is-flex-column-touch">
+                                    <input class="input has-background-white-bis border-none" type="text" name="" id=""
+                                           placeholder="Введите ключевые слова (например: сантехник)">
+    
+                                    <v-select
+                                            style="width: 100%" class="has-background-white-bis border-none"
+                                            :options="options"
+                                            v-model="selectedCity"
+                                    >
+                                        <template slot="selected-option" scope="option">
+                                            <img class="mr-2" src="assets/i/svg/location.svg"/> {{ option.label }}
+                                        </template>
+                                        <template slot="option" scope="option">
+                                            <img class="mr-2" src="assets/i/svg/location.svg"/> {{ option.label }}
+                                        </template>
+                                    </v-select>
+    
+                                    <button type="submit" class="button is-uppercase has-text-white-bis">
+                                        <figure class="image is-22x22 mr-3">
+                                            <img src="../../assets/i/svg/search.svg" alt="search">
+                                        </figure>
+                                        найти вакансию
+                                    </button>
+    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </section>
+    </section>
+    <section class="px-3 reg-worker">
+    
+        <div class="container">
+            <nav class="breadcrumb is-small py-4 is-white" aria-label="breadcrumbs">
+                <ul>
+                    <li><a href="#">Bulma</a></li>
+                    <li><a href="#">Documentation</a></li>
+                    <li><a href="#">Components</a></li>
+                    <li class="is-active"><a href="#" aria-current="page">Breadcrumb</a></li>
+                </ul>
+            </nav>
+    
+            <div class="my-5">
+                <div>
+                    <a href="" class="button is-uppercase has-text-white has-bg-button">Зарегистрироваться как
+                        соискатель</a>
+                    <a href="" class="button is-uppercase has-text-white bg-none ">Зарегистрироваться как работодатель</a>
+                </div>
+                <div class="box mt-4">
+                    <form>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field">
+                                <label>Ваше имя*</label>
+                                <input type="text" class="input" placeholder="Екатерина">
+                                <div class="is-size-7 has-text-danger mt-1">ошибка</div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label>Ваша фамилия*</label>
+                                <input type="text" class="input" placeholder="Иванова">
+                                <div class="is-size-7 has-text-danger mt-1">ошибка</div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label>Ваш номер телефона*</label>
+                                <input type="text" class="input" placeholder="+38 999 999 99 99">
+                                <div class="is-size-7 has-text-danger mt-1">ошибка</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="columns">
+                        <div class="column">
+                            <div class="field">
+                                <label>Email*</label>
+                                <input type="email" class="input" placeholder="example@example.com">
+                                <div class="is-size-7 has-text-danger mt-1">ошибка</div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label>Придумайте пароль*</label>
+                                <input type="password" class="input">
+                                <div class="is-size-7 has-text-danger mt-1">ошибка</div>
+                            </div>
+                        </div>
+                        <div class="column">
+                            <div class="field">
+                                <label>Повторите пароль*</label>
+                                <input type="password" class="input">
+                                <div class="is-size-7 has-text-danger mt-1">ошибка</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="is-size-7 mt-2">* Поля обязательные к заполнению</div>
+                    <div class="field mt-2">
+                        <input class="is-checkradio is-small" id="confidential" type="checkbox" name="confidential"
+                               checked="checked">
+                        <label for="confidential">Ознакомлен и согласен <a href="" class="yellow">политикой
+                            конфиденциальности</a> </label>
+                    </div>
+                        <div class="is-flex is-wrapped is-flex-wrap-wrap">
+                            <a href="" class="button has-text-white is-uppercase m-2">Зарегистрироваться</a>
+                            <a href="" class="button is-bordered ml-3 is-uppercase bg-none m-2"><img class="mr-2" src="assets/i/svg/google.svg" alt="">Зарегистрироваться <span class="is-hidden-touch"> через Google</span></a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+        </div>
+    
+    </section>
+    <section class="howWorkAll px-3 py-6">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-flex is-flex-direction-column is-justify-content-space-between">
+                    <div class="px-5">
+                        <h2 class="is-size-4 my-4 has-text-weight-bold">
+                            Как работает сервис?
+                        </h2>
+                        <p>Это специализированный сервис, направленный на то, чтобы помочь Вам найти квалифицированного
+                            помощника или достойную работу без посредников и в самый сжатый срок</p>
+                        <p>Для этого достаточно пройти несложный процесс регистрации и перейти к просмотру имеющихся на
+                            сайте
+                            анкет соискателей или вакансий от прямых работодателей.
+                            Сервис очень прост и удобен в использовании, но при этом максимально эффективен в поиске.
+                            Специальная поисковая система сайта разработана таким образом, что Вы сможете подобрать работу
+                            или
+                            помощницу, максимально отвечающую Вашим требованиям и пожеланиям. Еще одним преимуществом сайта
+                            является то, что Вы можете искать работу или помощницу в любое удобное время дня и ночи.
+                        </p>
+                        <p>Если у Вас все еще остались вопросы Вы можете найти на них ответы. Мы подготовили список вопросов
+                            и
+                            ответов на самые распространенные и часто задаваемые вопросы. </p>
+                    </div>
+                    <a href="" class="button is-uppercase has-text-white mt-4 ml-5 max-200">Найти ответ</a>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="px-3 py-6">
+        <div class="container is-fullhd">
+            <div class="columns is-multiline">
+                <div class="column is-one-fifth">
+                    logo
+                </div>
+    
+    
+                <div class="column is-one-fifth">
+                    <ul>
+                        <li><a href="">О компании</a></li>
+                        <li><a href="">Частые вопросы</a></li>
+                        <li><a href="">Частные объявления</a></li>
+                    </ul>
+                </div>
+    
+                <div class="column is-one-fifth">
+                    <ul>
+                        <li><a href="">Вакансии Работодателям</a></li>
+                        <li><a href="">Вакансии Соискателям</a></li>
+                        <li><a href="">Политика конфиденциальности</a></li>
+                    </ul>
+                </div>
+    
+                <div class="column is-one-fifth">
+                    <ul>
+                        <li><a href="">Личный кабинет</a></li>
+                        <li><a href="">Блог</a></li>
+                    </ul>
+                </div>
+    
+                <div class="column footer-right is-one-fifth has-text-right is-flex is-flex-direction-column is-justify-content-space-between is-align-items-end">
+                    <a style="max-width: 239px" href="" class="button revers is-uppercase has-text-white">Подать объявление</a>
+                    <div class="is-flex is-justify-content-end">
+                        <a href="" class="mx-3 is-size-7">Facebook</a>
+                        <a href="" class="mx-3 is-size-7">Instagram</a>
+                    </div>
+                </div>
+    
+            </div>
+            <div class="columns">
+                <div class="column is-offset-one-fifth-widescreen is-offset-one-fifth-tablet ">
+                    <h4 class="has-text-white is-size-5 has-text-weight-bold">
+                        Контакты
+                    </h4>
+                </div>
+            </div>
+            <div class="columns out_fonts">
+                <div class="column is-one-fifth is-offset-one-fifth-widescreen is-offset-one-fifth-tablet">
+                    <article class="media">
+                        <figure class="media-left mt-2">
+                            <p class="image is-16x16">
+                                <img src="assets/i/svg/location_white.svg" alt="location_white">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content ">
+                                <ul class="mt-0 ml-0 has-text-white">
+                                    <li>
+                                        ул. Маркграфенштрассе 30 <br>
+                                        45138 Эссен
+                                    </li>
+                                </ul>
+                            </div>
+    
+                        </div>
+    
+                    </article>
+    
+                    <article class="media">
+                        <figure class="media-left mt-2">
+                            <p class="image is-16x16">
+                                <img src="assets/i/svg/phone.svg" alt="phone">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content ">
+                                <ul class="mt-0 ml-0 has-text-white">
+                                    <li>
+                                        <a href="tel:0000000000">+49 15774567459</a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:0000000000">+49 15774567459</a>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                        </div>
+    
+                    </article>
+                </div>
+                <div class="column is-one-fifth">
+                    <article class="media">
+                        <figure class="media-left mt-2">
+                            <p class="image is-16x16">
+                                <img src="assets/i/svg/location_white.svg" alt="location_white">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content ">
+                                <ul class="mt-0 ml-0 has-text-white">
+                                    <li>
+                                        ул. Кача 9 лок I <br>
+                                        01-013 Варшава
+                                    </li>
+                                </ul>
+                            </div>
+    
+                        </div>
+    
+                    </article>
+    
+                    <article class="media">
+                        <figure class="media-left mt-2">
+                            <p class="image is-16x16">
+                                <img src="assets/i/svg/phone.svg" alt="phone">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content ">
+                                <ul class="mt-0 ml-0 has-text-white">
+                                    <li>
+                                        <a href="tel:0000000000">+49 15774567459</a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:0000000000">+49 15774567459</a>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                        </div>
+    
+                    </article>
+                </div>
+                <div class="column is-one-fifth">
+                    <article class="media">
+                        <figure class="media-left mt-2">
+                            <p class="image is-16x16">
+                                <img src="assets/i/svg/location_white.svg" alt="location_white">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content ">
+                                <ul class="mt-0 ml-0 has-text-white">
+                                    <li>
+                                        ул Чистяковская 2 офис 13 <br>
+                                        01078 Киев
+                                    </li>
+                                </ul>
+                            </div>
+    
+                        </div>
+    
+                    </article>
+    
+                    <article class="media">
+                        <figure class="media-left mt-2">
+                            <p class="image is-16x16">
+                                <img src="assets/i/svg/phone.svg" alt="phone">
+                            </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content ">
+                                <ul class="mt-0 ml-0 has-text-white">
+                                    <li>
+                                        <a href="tel:0000000000">+49 15774567459</a>
+                                    </li>
+                                    <li>
+                                        <a href="tel:0000000000">+49 15774567459</a>
+                                    </li>
+                                </ul>
+                            </div>
+    
+                        </div>
+    
+                    </article>
+                </div>
+                <div class="column is-one-fifth is-flex is-flex-direction-column is-justify-content-end">
+                    <div class="is-flex footer-right is-justify-content-end">
+                        <a href="">
+                            <img class="mr-2" src="assets/i/svg/telegram.svg" alt="telegram">
+                        </a>
+                        <a href="">
+                            <img class="mr-2" src="assets/i/svg/whatsapp.svg" alt="whatsapp">
+                        </a>
+                        <a href="">
+                            <img class="mr-2" src="assets/i/svg/viber.svg" alt="viber">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>
+
+<!--JS-->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.14"></script>
+<script src="https://unpkg.com/vue-select@latest"></script>
+<script src="https://unpkg.com/vue2-editor/dist/vue2-editor.umd.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/vueSfdevelop.js"></script>
+</body>
+
+</html>

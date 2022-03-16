@@ -15795,6 +15795,10 @@ body {
     }
 }
 
+.has-bg-button {
+    background: rgba(122, 154, 175, 0.7) !important;
+}
+
 .header {
     background: url("../../assets/i/main-bg.png");
     background-repeat: no-repeat;
@@ -15859,9 +15863,7 @@ body {
 }
 
 .button.revers {
-    background: -webkit-gradient(linear, left top, left bottom, from(#c2e7ff), to(#7a9aaf));
-    background: -o-linear-gradient(#c2e7ff 0%, #7a9aaf 100%);
-    background: linear-gradient(#c2e7ff 0%, #7a9aaf 100%);
+    background: rgba(122, 154, 175, 0.7);
 }
 
 .button.revers:hover {
@@ -16054,4 +16056,8 @@ footer .media + .media {
 
 .has-margin-top {
     margin-top: 3px;
+}
+
+.is-checkradio[type="radio"] + label::after {
+    background: #FF8800;
 }
